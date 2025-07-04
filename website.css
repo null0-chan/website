@@ -1,0 +1,256 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Questrial&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Questrial&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* navbar */
+.slide {
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform: translateX(-200px);
+    transition: 0.4s ease;
+    z-index: 2;
+    margin: 0;
+}
+
+.slide h1 {
+    font-family: "Outfit";
+    color: #eb00ff;
+    font-weight: 800;
+    text-align: right;
+    padding: 15px 0;
+    padding-right: 30px;
+    padding-top: 4px;
+    user-select: none;
+}
+
+.slide ul {
+    padding: 0px;
+    padding-top: -50px;
+}
+
+.slide ul li {
+    list-style: none;
+}
+
+.slide ul li a {
+    font-family: "Outfit";
+    color: #011a41;
+    font-weight: 600;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.slide ul li a i {
+    width: 40px;
+    text-align: center;
+}
+
+.slide ul li:hover a {
+    background-color: #eb00ff;
+    color: #FFFFFF;
+}
+
+/* Toggle Button */
+input[type="checkbox"] {
+    display: none;
+}
+
+label.toggle {
+    position: absolute;
+    top: 23px;
+    left: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: #FFFFFF;
+    z-index: 3;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.toggle .common {
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    background-color: #000000;
+    transition: 0.3s ease;
+}
+
+.toggle .top_line {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle_line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .bottom_line {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Toggle Active State */
+input:checked ~ label.toggle .top_line {
+    left: 8px;
+    top: 22px;
+    width: 30px;
+    transform: rotate(51deg);
+}
+
+input:checked ~ label.toggle .middle_line {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+input:checked ~ label.toggle .bottom_line {
+    left: 8px;
+    top: 22px;
+    width: 30px;
+    transform: rotate(-51deg);
+}
+
+input:checked ~ .slide {
+    transform: translateX(0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+/* header */
+.header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    margin-right: -8px;
+    margin-left: -8px;
+    margin-top: -8px;
+    background-color: #FFFFFF;
+}
+.header h1 {
+    font-size: 200%;
+    font-family: "Rubik";
+    direction: bold;
+    color: #000000;
+    user-select: none;
+}
+
+/* video */
+.video {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.content-video video {
+    width: 100vw;
+    max-width: 427px;
+    user-select: none;
+}
+
+/* subjudul/tentang saya */
+.subjudul {
+    margin-top: -23px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.subjudul-content h2 {
+    display: inline-flex;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-left: 15px;
+    margin-top: 40px;
+    margin-right: 8px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #88a201;
+}
+.subjudul-content p {
+    font-family: "Questrial";
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: justify;
+    user-select: text;
+    padding: 15px;
+    margin-top: -15px;
+}
+
+/* showcase project */
+.showcase-content {
+    justify-content: center;
+    margin-top: -23px;
+    margin-left: -5px;
+    align-self: center;
+}
+.showcase-content h2 {
+    display: inline-flex;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-left: 12px;
+    margin-top: 40px;
+    margin-right: 8px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #88a201;
+}
+.showcase-content video {
+    width: 100%;
+    max-width: 417px;
+    border-radius: 20px;
+    border: 3px solid #111;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #b2defa;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.12);
+}
+/* style carousel */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 16px;
+    -webkit-overflow-scrolling: touch;
+}
+.card {
+    min-width: 250px;
+    flex-shrink: 0;
+    background: #f6f8fa;
+    border: 2px solid #B7F1FF;
+    border-radius: 8px;
+    padding: 16px;
+    scroll-snap-align: start;
+}
+.card a {
+    text-decoration: none;
+    color: 000000;
+    font-family: "Nunito";
+}
+.card p {
+    font-family: "Questrial";
+    color: #000000;
+}
